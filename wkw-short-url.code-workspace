@@ -10,6 +10,21 @@
 			{
 				"type": "aws-sam",
 				"request": "direct-invoke",
+				"name": "wkw-short-url-forwarder:lambda_function.lambda_handler (python3.8)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "${workspaceFolder}/wkw-short-url-forwarder",
+					"lambdaHandler": "lambda_function.lambda_handler"
+				},
+				"lambda": {
+					"runtime": "python3.8",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
 				"name": "wkw-short-url-generator:lambda_function.lambda_handler (python3.8)",
 				"invokeTarget": {
 					"target": "code",
