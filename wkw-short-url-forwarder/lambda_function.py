@@ -22,7 +22,7 @@ def lambda_handler(event, context):
 
     except Exception as e:
         print(e)
-        redirect_url = os.environ["HOST"]
+        redirect_url = "https://" + os.environ["HOST"]
         # S3 버킷에 접속하면서 버킷이 존재하지 않거나 연결이 불안정한 이유로 예외가 발생할 수 있다.
         # 이러한 경우를 위해 redirect_url로 서비스의 주소로 가도록 설정하였다
 
