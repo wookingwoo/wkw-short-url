@@ -93,9 +93,13 @@
       fetch(origin_endpoint, {
         method: "POST",
         header: {
+          "Content-Type": "application/json",
+          Accept: "*/*",
+          "Accept-Encoding": "gzip, deflate, br",
+          Connection: "keep-alive",
+          "x-api-key": "nS3iFxkIk27ZxRTCnxOLu1oxr1zI639ZW78zYgR9",
           "Access-Control-Allow-Origin": "*",
           origin: origin_endpoint,
-          "x-api-key": "nS3iFxkIk27ZxRTCnxOLu1oxr1zI639ZW78zYgR9",
         },
         body: JSON.stringify({ native_url: native_url }),
       })
