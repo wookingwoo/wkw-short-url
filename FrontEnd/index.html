@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>우킹우 - 단축 URL</title>
+    <title data-lang="title">wookingwoo - short URL</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -44,7 +44,7 @@
 
   <body>
     <section class="section">
-      <h1 class="title">우킹우 - 단축 URL</h1>
+      <h1 class="title" data-lang="title">[title]</h1>
     </section>
 
     <div class="container">
@@ -53,29 +53,35 @@
           style="height: 60px"
           class="input"
           type="text"
-          placeholder="단축할 URL을 입력하세요. (예: https://wookingwoo.com)"
+          placeholder="Enter your long URL. (ex: https://wookingwoo.com)"
         />
         <button
           style="width: 15%; height: 60px"
           id="generate-button"
           class="button is-primary"
+          data-lang="create"
         >
-          줄이기
+          [create]
         </button>
       </div>
 
       <div hidden id="success-card" class="notification is-link is-light">
         <span style="float: left" id="result"></span>
-        <button id="copy-button" class="button is-link">복사</button>
+        <button id="copy-button" class="button is-link" data-lang="copy">
+          [copy]
+        </button>
       </div>
     </div>
 
     <div hidden id="fail-card" class="notification is-warning is-light">
-      <span
-        >URL 형식이 올바르지 않습니다. https:// 혹은 http:// 를 붙여서
-        작성해주세요</span
-      >
+      <span data-lang="wrong-url-format">[wrong-url-format]</span>
     </div>
+
+    <p id="language">
+      <span data-lang="now_sys_lang">[now-sys-lang]</span> :
+      <span id="locale"></span>
+    </p>
+    <button id="btn-en">English</button> <button id="btn-ko">Korean</button>
   </body>
 
   <script>
@@ -135,5 +141,64 @@
       );
       return !pattern.test(str);
     }
+  </script>
+
+  <script>
+    // 다국어 지원 script
+    // 언어별 JSON 파일
+    const lang = {
+      en: {
+        now_sys_lang: "System locale",
+        title: "wookingwoo - short URL",
+        create: "create",
+        copy: "copy",
+        "wrong-url-format": "Not a valid URL. Add https:// or http://",
+      },
+      ko: {
+        now_sys_lang: "시스템 지역",
+        title: "우킹우 - 단축 URL",
+        create: "줄이기",
+        copy: "복사",
+        "wrong-url-format":
+          "URL 형식이 올바르지 않습니다. https:// 혹은 http:// 를 붙여서 작성해주세요",
+      },
+    };
+
+    // 현재 브라우저의 언어 가져오기
+    function getLanguage() {
+      return navigator.language || navigator.userLanguage;
+    }
+
+    // 언어별 적용
+    function init(localeStr) {
+      document.getElementById("locale").textContent = localeStr;
+    }
+
+    // 초기 작업
+    const currentLang = getLanguage();
+    init(currentLang);
+    render(currentLang.substr(0, 2));
+
+    // 언어별 렌더링
+    function render(locale) {
+      const $lang = document.querySelectorAll("[data-lang]");
+      $lang.forEach((el) => {
+        const code = el.dataset.lang;
+
+        try {
+          el.textContent = lang[locale][code];
+        } catch (error) {
+          el.textContent = lang["en"][code];
+        }
+      });
+    }
+
+    // 버튼 이벤트
+    document.getElementById("btn-en").addEventListener("click", (e) => {
+      render("en");
+    });
+    document.getElementById("btn-ko").addEventListener("click", (e) => {
+      render("ko");
+    });
   </script>
 </html>
