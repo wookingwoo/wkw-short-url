@@ -74,7 +74,7 @@
     </div>
 
     <div hidden id="fail-card" class="notification is-warning is-light">
-      <span data-lang="wrong-url-format">[wrong-url-format]</span>
+      <span data-lang="wrong_url_format">[wrong_url_format]</span>
     </div>
 
     <p id="language">
@@ -148,18 +148,20 @@
     // 언어별 JSON 파일
     const lang = {
       en: {
-        now_sys_lang: "System locale",
         title: "wookingwoo - short URL",
+        ISO_639_1_Language_Codes: "en",
+        now_sys_lang: "System locale",
         create: "create",
         copy: "copy",
-        "wrong-url-format": "Not a valid URL. Add https:// or http://",
+        wrong_url_format: "Not a valid URL. Add https:// or http://",
       },
       ko: {
-        now_sys_lang: "시스템 지역",
         title: "우킹우 - 단축 URL",
+        ISO_639_1_Language_Codes: "ko",
+        now_sys_lang: "시스템 지역",
         create: "줄이기",
         copy: "복사",
-        "wrong-url-format":
+        wrong_url_format:
           "URL 형식이 올바르지 않습니다. https:// 혹은 http:// 를 붙여서 작성해주세요",
       },
     };
@@ -175,8 +177,14 @@
     }
 
     // 초기 작업
-    const currentLang = getLanguage();
-    init(currentLang);
+    const systemLang = getLanguage(); // systemLang = 브라우저의 언어
+    let currentLang = localStorage.getItem("lang"); // localStorage에 저장된 'lang'값 가져오기 (마지막 언어 선택값)
+
+    if (currentLang == "" || currentLang == null || currentLang == undefined) {
+      currentLang = systemLang; // currentLang가 null일 경우 브라우저 언어로 사용
+    }
+
+    init(systemLang);
     render(currentLang.substr(0, 2));
 
     // 언어별 렌더링
@@ -196,9 +204,11 @@
     // 버튼 이벤트
     document.getElementById("btn-en").addEventListener("click", (e) => {
       render("en");
+      localStorage.setItem("lang", "en"); // localStorage에 선택 언어 저장
     });
     document.getElementById("btn-ko").addEventListener("click", (e) => {
       render("ko");
+      localStorage.setItem("lang", "ko"); // localStorage에 선택 언어 저장
     });
   </script>
 </html>
