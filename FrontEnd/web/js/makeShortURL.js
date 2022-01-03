@@ -1,3 +1,4 @@
+// let origin_endpoint = "https://cors-anywhere.herokuapp.com/https://wkw.one/wkw-short-url-generator";
 let origin_endpoint = "https://wkw.one/wkw-short-url-generator";
 
 document.getElementById("generate-button").addEventListener("click", () => {
@@ -6,6 +7,12 @@ document.getElementById("generate-button").addEventListener("click", () => {
   if (isNotValidURL(native_url)) {
     document.getElementById("success-card").style.display = "none";
     document.getElementById("fail-card").style.display = "block";
+    document
+      .getElementById("fail-card-text")
+      .setAttribute("data-lang", "wrong_url_format");
+
+    render(currentLang.substr(0, 2)); // 언어 다시 렌더링
+
     return;
   }
 
@@ -38,6 +45,15 @@ document.getElementById("generate-button").addEventListener("click", () => {
     })
     .catch((err) => {
       console.log(err);
+
+      document.getElementById("success-card").style.display = "none";
+      document.getElementById("fail-card").style.display = "block";
+
+      document
+        .getElementById("fail-card-text")
+        .setAttribute("data-lang", "shortening_error");
+
+      render(currentLang.substr(0, 2)); // 언어 다시 렌더링
     });
 });
 

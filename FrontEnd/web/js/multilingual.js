@@ -7,6 +7,8 @@ const lang = {
     create: "create",
     copy: "copy",
     wrong_url_format: "Not a valid URL. Add https:// or http://",
+    shortening_error:
+    "Error occurred in URL reduction process. If daily allowed traffic is exceeded, use can be restricted. If the problem continues or you need to expand your usage, please contact us by email.",
     go_wookingwoo_msg: "Send a web message. >>",
     description: "Free URL shortener. wkw.one makes simple URL for you.",
 
@@ -32,6 +34,8 @@ const lang = {
     copy: "복사",
     wrong_url_format:
       "URL 형식이 올바르지 않습니다. https:// 혹은 http:// 를 붙여서 작성해주세요",
+    shortening_error:
+      "URL 단축 과정에서 오류가 발생했습니다. 일일 허용 트래픽을 초과할 경우 사용이 제한될 수 있습니다. 문제가 계속되거나 사용량 확장이 필요한 경우 이메일 문의 바랍니다.",
     go_wookingwoo_msg: "웹 문자 전송 >>",
     description: "우킹우 단축 URL 무료 서비스",
 
