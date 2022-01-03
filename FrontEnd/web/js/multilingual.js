@@ -7,6 +7,7 @@ const lang = {
     create: "create",
     copy: "copy",
     wrong_url_format: "Not a valid URL. Add https:// or http://",
+    go_wookingwoo_msg: "Send a web message. >>",
     description: "Free URL shortener. wkw.one makes simple URL for you.",
 
     animal_face: "animal face",
@@ -31,6 +32,7 @@ const lang = {
     copy: "복사",
     wrong_url_format:
       "URL 형식이 올바르지 않습니다. https:// 혹은 http:// 를 붙여서 작성해주세요",
+    go_wookingwoo_msg: "웹 문자 전송 >>",
     description: "우킹우 단축 URL 무료 서비스",
 
     animal_face: "동물상 테스트",
