@@ -1,5 +1,5 @@
-// let origin_endpoint = "https://cors-anywhere.herokuapp.com/https://wkw.one/wkw-short-url-generator";
-let origin_endpoint = "https://wkw.one/wkw-short-url-generator";
+let origin_endpoint = "https://cors-anywhere.herokuapp.com/https://wkw.one/wkw-short-url-generator";
+// let origin_endpoint = "https://wkw.one/wkw-short-url-generator";
 
 document.getElementById("generate-button").addEventListener("click", () => {
   let native_url = document.getElementsByClassName("input")[0].value;

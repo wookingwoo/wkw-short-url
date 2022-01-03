@@ -2,213 +2,368 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-lang="title">wookingwoo - short URL</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <style>
-      .form {
-        text-align: center;
-        width: 400px;
-        height: 500;
-        padding-top: 120px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Free URL shortener. wkw.one makes simple URL for you."
+    />
+    <meta name="author" content="wookingwoo" />
 
-      .title {
-        font-size: 50px;
-        text-align: center;
-        margin-top: 30px;
-      }
+    <!-- Webpage Title -->
+    <title data-lang="title">wkw.one - wookingwoo short URL</title>
 
-      .form {
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: auto;
-      }
+    <!-- Styles -->
 
-      .result {
-        align-items: center;
-      }
-
-      .copy-button {
-        float: right;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <link href="css/swiper.css" rel="stylesheet" />
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
+  <body data-spy="scroll" data-target=".fixed-top">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <!-- end of preloader -->
 
-  <body>
-    <section class="section">
-      <h1 class="title" data-lang="title">[title]</h1>
-    </section>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+ 
+     <a class="navbar-brand logo-text page-scroll" href="https://wkw.one">wkw.one</a>
 
-    <div class="container">
-      <div id="form" class="field has-addons">
-        <input
-          style="height: 60px"
-          class="input"
-          type="text"
-          placeholder="Enter your long URL. (ex: https://wookingwoo.com)"
-        />
+
+        <!-- Mobile Menu Toggle Button -->
         <button
-          style="width: 15%; height: 60px"
-          id="generate-button"
-          class="button is-primary"
-          data-lang="create"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          [create]
+          <span class="navbar-toggler-awesome fas fa-bars"></span>
+          <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="https://wookingwoo.com" target="_blank">wookingwoo.com</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="https://msg.wookingwoo.com" target="_blank" data-lang="wookingwoo_msg">[wookingwoo_msg]</a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://animalface.wookingwoo.com" target="_blank" data-lang="animal_face">[animal_face]</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://maptool.wookingwoo.com" target="_blank" data-lang="wookingwoo_maptool">[wookingwoo_maptool]</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle page-scroll"
+                id="navbarDropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Language</a
+              >
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"
+                  ><span class="item-text" id="btn-en">English</span></a
+                >
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item"
+                  ><span class="item-text" id="btn-ko">Korean</span></a
+                >
+              </div>
+            </li>
+            <!-- end of dropdown menu -->
+          </ul>
+        </div>
       </div>
+      <!-- end of container -->
+    </nav>
+    <!-- end of navbar -->
+    <!-- end of navigation -->
 
-      <div hidden id="success-card" class="notification is-link is-light">
-        <span style="float: left" id="result"></span>
-        <button id="copy-button" class="button is-link" data-lang="copy">
-          [copy]
-        </button>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <section class="section">
+                <h1 class="title" data-lang="title">[title]</h1>
+              </section>
+
+              <p class="p-large p-heading" data-lang="description">
+               [description]
+              </p>
+
+              <div class="container">
+        
+
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="input form-control"
+                    placeholder="Enter your long URL. (ex: https://wookingwoo.com)"
+                    type="text"
+                    aria-describedby="generate-button"
+                    style="height: 60px"
+                  />
+                  <button
+                    class="btn-solid-lg"
+                    type="button"
+                    id="generate-button"
+                    style="margin-left: 8px;"
+                    data-lang="create"
+                  >
+                    [create]
+                  </button>
+                </div>
+            </div>
+
+
+                <div class="alert alert-dismissible alert-success" id="success-card" style="display: none; padding-bottom: 35px;">
+
+                  <div class="float-left">
+                  <strong>단축 URL 생성 완료!</strong>
+                  </div>
+                  <br>
+                  <div style="display: inline-block;">
+
+                  <span style="float: left; display: inline-block;" id="result"></span>
+                  <button
+                  id="copy-button"
+                  class="button is-link btn-outline-sm page-scroll"
+                  data-lang="copy"
+                  style="display: inline-block; margin-left: 8px;"
+                >
+                  [copy]
+                </button>
+              </div>
+              <br>
+
+              <div class="float-right">
+                <a href="https://msg.wookingwoo.com" target="_blank" data-lang="go_wookingwoo_msg">[go_wookingwoo_msg]</a>
+                </div>
+                
+
+                </div>
+              </div>
+
+              <div class="alert alert-dismissible alert-warning" id="fail-card" style="display: none;">
+                <p class="mb-0" id="fail-card-text" ></p>
+              </div>
+
+            </div>
+            <!-- end of text-container -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
       </div>
-    </div>
+      <!-- end of container -->
+    </header>
+    <!-- end of header -->
+    <!-- end of header -->
 
-    <div hidden id="fail-card" class="notification is-warning is-light">
-      <span data-lang="wrong_url_format">[wrong_url_format]</span>
-    </div>
+    <!-- Description 1 -->
+    <div id="description" class="basic-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2"></div>
 
-    <p id="language">
-      <span data-lang="now_sys_lang">[now-sys-lang]</span> :
-      <span id="locale"></span>
-    </p>
-    <button id="btn-en">English</button> <button id="btn-ko">Korean</button>
+          <div class="col-lg-8">
+            <div class="text-container">
+              <h3 data-lang="description1">[description1]</h3>
+        
+              <ul class="list-unstyled li-space-lg">
+ 
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body" data-lang="description2">
+                    [description2]
+                  </div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body" data-lang="description3">
+                    [description3]
+                  </div>
+                </li>
+
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body" data-lang="description4">
+                    [description4]
+                  </div>
+                </li>
+
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body" data-lang="description5">
+                    [description5]
+                  </div>
+                </li>
+
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                    <p style="margin-left:8px; margin-right:8px" data-lang="email_inquiry"></p>
+                    <a href="mailto:contact@wookingwoo.com">contact@wookingwoo.com</a>
+                </li>
+              </ul>
+          
+            </div>
+            <!-- end of text-container -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of basic-1 -->
+    <!-- end of description 1 -->
+
+    <!-- Description 1 Details Lightbox -->
+    <!-- Details Lightbox -->
+    <div
+      id="description-1-details-lightbox"
+      class="lightbox-basic zoom-anim-dialog mfp-hide"
+    ></div>
+    <!-- end of lightbox-basic -->
+    <!-- end of details lightbox -->
+    <!-- end of description 1 details lightbox -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="footer-col fourth">
+            </div>
+            <!-- end of footer-col -->
+
+            <div class="footer-col first"">
+              <h5>About wkw.one</h5>
+              <p class="p-small" data-lang="description">
+               [description]
+              </p>
+            </div>
+            <!-- end of footer-col -->
+            <div class="footer-col second">
+              <h5>Contact Info</h5>
+              <ul class="list-unstyled li-space-lg p-small">
+                <li class="media">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="media-body">Republic of Korea, Seoul</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-envelope"></i>
+                  <div class="media-body">
+                    <a href="mailto:contact@wookingwoo.com">contact@wookingwoo.com</a>
+                  </div>
+                </li>
+          
+              </ul>
+            </div>
+            <!-- end of footer-col -->
+
+            <div class="footer-col fourth">
+              <h5>Other Apps</h5>
+              <ul class="list-unstyled li-space-lg p-small">
+                <li><a href="https://msg.wookingwoo.com" target="_blank" data-lang="wookingwoo_msg">[wookingwoo_msg]</a></li>
+                <li><a href="https://animalface.wookingwoo.com" target="_blank" data-lang="animal_face">[animal_face]</a></li>
+                <li><a href="https://maptool.wookingwoo.com" target="_blank" data-lang="wookingwoo_maptool">[wookingwoo_maptool]</a></li>
+              </ul>
+            </div>
+            <!-- end of footer-col -->
+            <div class="footer-col fifth">
+              <span class="fa-stack">
+                <a href="https://wookingwoo.com/" target="_blank">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-home fa-stack-1x"></i>
+                </a>
+              </span>
+              <span class="fa-stack">
+                <a href="https://github.com/wookingwoo" target="_blank">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x"></i>
+                </a>
+              </span>
+
+            </div>
+            <!-- end of footer-col -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of footer -->
+    <!-- end of footer -->
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="p-small">
+              Copyright © 2022 <a href="https://wookingwoo.com">wookingwoo</a>
+            </p>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- enf of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of copyright -->
+    <!-- end of copyright -->
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/makeShortURL.js"></script>
+    <script src="js/multilingual.js"></script>
   </body>
-
-  <script>
-    let origin_endpoint = "https://wkw.one/wkw-short-url-generator";
-
-    document.getElementById("generate-button").addEventListener("click", () => {
-      let native_url = document.getElementsByClassName("input")[0].value;
-
-      if (isNotValidURL(native_url)) {
-        document.getElementById("success-card").style.display = "none";
-        document.getElementById("fail-card").style.display = "block";
-        return;
-      }
-
-      fetch("origin_endpoint, {
-        method: "POST",
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          origin: origin_endpoint,
-          "x-api-key": "nS3iFxkIk27ZxRTCnxOLu1oxr1zI639ZW78zYgR9",
-        },
-        body: JSON.stringify({ native_url: native_url }),
-      })
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          if (data.short_id == null) {
-          } else {
-            document.getElementById("fail-card").style.display = "none";
-            document.getElementById("success-card").style.display = "block";
-            let shorten_url = data.forward_url + "/" + data.short_id;
-            document.getElementById("result").innerHTML =
-              "<a target='_blank' href='https://" +
-              shorten_url +
-              "'>" +
-              "https://" +
-              shorten_url +
-              "</a>";
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    });
-
-    document
-      .getElementById("copy-button")
-      .addEventListener("click", async () => {
-        let copyText = document.getElementById("result").innerText;
-        await navigator.clipboard.writeText(copyText);
-      });
-
-    function isNotValidURL(str) {
-      let pattern = new RegExp(
-        /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi
-      );
-      return !pattern.test(str);
-    }
-  </script>
-
-  <script>
-    // 다국어 지원 script
-    // 언어별 JSON 파일
-    const lang = {
-      en: {
-        title: "wkw.one - wookingwoo short URL",
-        ISO_639_1_Language_Codes: "en",
-        now_sys_lang: "System locale",
-        create: "create",
-        copy: "copy",
-        wrong_url_format: "Not a valid URL. Add https:// or http://",
-      },
-      ko: {
-        title: "wkw.one - 우킹우 단축 URL",
-        ISO_639_1_Language_Codes: "ko",
-        now_sys_lang: "시스템 지역",
-        create: "줄이기",
-        copy: "복사",
-        wrong_url_format:
-          "URL 형식이 올바르지 않습니다. https:// 혹은 http:// 를 붙여서 작성해주세요",
-      },
-    };
-
-    // 현재 브라우저의 언어 가져오기
-    function getLanguage() {
-      return navigator.language || navigator.userLanguage;
-    }
-
-    // 언어별 적용
-    function init(localeStr) {
-      document.getElementById("locale").textContent = localeStr;
-    }
-
-    // 초기 작업
-    const systemLang = getLanguage(); // systemLang = 브라우저의 언어
-    let currentLang = localStorage.getItem("lang"); // localStorage에 저장된 'lang'값 가져오기 (마지막 언어 선택값)
-
-    if (currentLang == "" || currentLang == null || currentLang == undefined) {
-      currentLang = systemLang; // currentLang가 null일 경우 브라우저 언어로 사용
-    }
-
-    init(systemLang);
-    render(currentLang.substr(0, 2));
-
-    // 언어별 렌더링
-    function render(locale) {
-      const $lang = document.querySelectorAll("[data-lang]");
-      $lang.forEach((el) => {
-        const code = el.dataset.lang;
-
-        try {
-          el.textContent = lang[locale][code];
-        } catch (error) {
-          el.textContent = lang["en"][code];
-        }
-      });
-    }
-
-    // 버튼 이벤트
-    document.getElementById("btn-en").addEventListener("click", (e) => {
-      render("en");
-      localStorage.setItem("lang", "en"); // localStorage에 선택 언어 저장
-    });
-    document.getElementById("btn-ko").addEventListener("click", (e) => {
-      render("ko");
-      localStorage.setItem("lang", "ko"); // localStorage에 선택 언어 저장
-    });
-  </script>
 </html>
