@@ -1,537 +1,549 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
     <!-- SEO Meta Tags -->
     <meta
-      name="description"
-      content="Free URL shortener. wkw.one makes simple URL for you. (우킹우 단축 url 서비스)"
+            name="description"
+            content="Free URL shortener. wkw.one makes simple URL for you. (우킹우 단축 url 서비스)"
     />
-    <meta name="author" content="wookingwoo" />
+    <meta name="author" content="wookingwoo"/>
+    <meta name="robots" content="ALL">
+    <meta name=keywords"
+          content="단축url, URLshortener, url, 단축, shortener, url줄이기, shortURL, wkw, wookingwoo, 우킹우, 우킹우URL, 우킹우단축URL, wookingwooshortURL, wkwURL, wkwone, url다이어트, URLdiet">
+    <meta name="reply-to" content="contact@wookingwoo.com">
+    <meta name="content-language" content="en">
+    <meta name="content-language" content="kr">
+    <meta http-equiv="content-type" content="text/html; charset=en">
+    <meta http-equiv="content-type" content="text/html; charset=kr">
+
     <meta
-      name="naver-site-verification"
-      content="99c891a98c099b02c99546059d22660119f10347"
+            name="naver-site-verification"
+            content="99c891a98c099b02c99546059d22660119f10347"
     />
-    <link rel="canonical" href="https://wkw.one" />
+    <link rel="canonical" href="https://wkw.one"/>
 
     <!-- Webpage Title -->
     <title data-lang="title">wkw.one - wookingwoo short URL</title>
 
     <!-- Styles -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+            rel="stylesheet"
     />
-    <link href="FrontEndSource/css/bootstrap.css" rel="stylesheet" />
-    <link href="FrontEndSource/css/fontawesome-all.css" rel="stylesheet" />
-    <link href="FrontEndSource/css/swiper.css" rel="stylesheet" />
-    <link href="FrontEndSource/css/magnific-popup.css" rel="stylesheet" />
-    <link href="FrontEndSource/css/styles.css" rel="stylesheet" />
+    <link href="FrontEndSource/css/bootstrap.css" rel="stylesheet"/>
+    <link href="FrontEndSource/css/fontawesome-all.css" rel="stylesheet"/>
+    <link href="FrontEndSource/css/swiper.css" rel="stylesheet"/>
+    <link href="FrontEndSource/css/magnific-popup.css" rel="stylesheet"/>
+    <link href="FrontEndSource/css/styles.css" rel="stylesheet"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics 시작 -->
     <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-3GB45HPBVP"
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-3GB45HPBVP"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag("config", "G-3GB45HPBVP");
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+
+        gtag("config", "G-3GB45HPBVP");
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics 끝 -->
-  </head>
-  <body data-spy="scroll" data-target=".fixed-top">
-    <!-- Preloader -->
-    <div class="spinner-wrapper">
-      <div class="spinner">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+<!-- Preloader -->
+<div class="spinner-wrapper">
+    <div class="spinner">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
         <div class="bounce3"></div>
-      </div>
     </div>
-    <!-- end of preloader -->
+</div>
+<!-- end of preloader -->
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
         <a class="navbar-brand logo-text page-scroll" href="https://wkw.one"
-          >wkw.one</a
+        >wkw.one</a
         >
 
         <!-- Mobile Menu Toggle Button -->
         <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarsExampleDefault"
-          aria-controls="navbarsExampleDefault"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-awesome fas fa-bars"></span>
-          <span class="navbar-toggler-awesome fas fa-times"></span>
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
         <!-- end of mobile menu toggle button -->
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link page-scroll"
-                href="https://wookingwoo.com"
-                target="_blank"
-                >wookingwoo.com</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link page-scroll"
-                href="https://msg.wookingwoo.com"
-                target="_blank"
-                data-lang="wookingwoo_msg"
-                >[wookingwoo_msg]</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link page-scroll"
-                href="https://animalface.wookingwoo.com"
-                target="_blank"
-                data-lang="animal_face"
-                >[animal_face]</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link page-scroll"
-                href="https://maptool.wookingwoo.com"
-                target="_blank"
-                data-lang="wookingwoo_maptool"
-                >[wookingwoo_maptool]</a
-              >
-            </li>
-            <!-- Dropdown Menu -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle page-scroll"
-                id="navbarDropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Language</a
-              >
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a
+                            class="nav-link page-scroll"
+                            href="https://wookingwoo.com"
+                            target="_blank"
+                    >wookingwoo.com</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link page-scroll"
+                            href="https://msg.wookingwoo.com"
+                            target="_blank"
+                            data-lang="wookingwoo_msg"
+                    >[wookingwoo_msg]</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link page-scroll"
+                            href="https://animalface.wookingwoo.com"
+                            target="_blank"
+                            data-lang="animal_face"
+                    >[animal_face]</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link page-scroll"
+                            href="https://maptool.wookingwoo.com"
+                            target="_blank"
+                            data-lang="wookingwoo_maptool"
+                    >[wookingwoo_maptool]</a
+                    >
+                </li>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle page-scroll"
+                            id="navbarDropdown"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                    >Language</a
+                    >
 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item"
-                  ><span class="item-text" id="btn-en">English</span></a
-                >
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"
+                        ><span class="item-text" id="btn-en">English</span></a
+                        >
 
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"
-                  ><span class="item-text" id="btn-ko">Korean</span></a
-                >
-              </div>
-            </li>
-            <!-- end of dropdown menu -->
-          </ul>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item"
+                        ><span class="item-text" id="btn-ko">Korean</span></a
+                        >
+                    </div>
+                </li>
+                <!-- end of dropdown menu -->
+            </ul>
         </div>
-      </div>
-      <!-- end of container -->
-    </nav>
-    <!-- end of navbar -->
-    <!-- end of navigation -->
+    </div>
+    <!-- end of container -->
+</nav>
+<!-- end of navbar -->
+<!-- end of navigation -->
 
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
+<!-- Header -->
+<header class="header">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <div class="text-container">
-              <section class="section">
-                <h1 class="title" data-lang="title">[title]</h1>
-              </section>
+            <div class="col-lg-12">
+                <div class="text-container">
+                    <section class="section">
+                        <h1 class="title" data-lang="title">[title]</h1>
+                    </section>
 
-              <p class="p-large p-heading" data-lang="description">
-                [description]
-              </p>
+                    <p class="p-large p-heading" data-lang="description">
+                        [description]
+                    </p>
 
-              <div class="container">
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="input form-control"
-                    placeholder="Enter your long URL. (ex: https://wookingwoo.com)"
-                    type="text"
-                    aria-describedby="generate-button"
-                    style="height: 60px"
-                  />
-                  <button
-                    class="btn-solid-lg"
-                    type="button"
-                    id="generate-button"
-                    style="margin-left: 8px"
-                    data-lang="create"
-                  >
-                    [create]
-                  </button>
-                </div>
-              </div>
+                    <div class="container">
+                        <div class="input-group mb-3">
+                            <input
+                                    type="text"
+                                    class="input form-control"
+                                    placeholder="Enter your long URL. (ex: https://wookingwoo.com)"
+                                    type="text"
+                                    aria-describedby="generate-button"
+                                    style="height: 60px"
+                            />
+                            <button
+                                    class="btn-solid-lg"
+                                    type="button"
+                                    id="generate-button"
+                                    style="margin-left: 8px"
+                                    data-lang="create"
+                            >
+                                [create]
+                            </button>
+                        </div>
+                    </div>
 
-              <div
-                class="alert alert-dismissible alert-success"
-                id="success-card"
-                style="display: none; padding-bottom: 35px"
-              >
-                <div class="float-left">
-                  <strong>단축 URL 생성 완료!</strong>
-                </div>
-                <br />
-                <div style="display: inline-block">
+                    <div
+                            class="alert alert-dismissible alert-success"
+                            id="success-card"
+                            style="display: none; padding-bottom: 35px"
+                    >
+                        <div class="float-left">
+                            <strong>단축 URL 생성 완료!</strong>
+                        </div>
+                        <br/>
+                        <div style="display: inline-block">
                   <span
-                    style="float: left; display: inline-block"
-                    id="result"
+                          style="float: left; display: inline-block"
+                          id="result"
                   ></span>
-                  <button
-                    id="copy-button"
-                    class="button is-link btn-outline-sm page-scroll"
-                    data-lang="copy"
-                    style="display: inline-block; margin-left: 8px"
-                  >
-                    [copy]
-                  </button>
-                </div>
-                <br />
+                            <button
+                                    id="copy-button"
+                                    class="button is-link btn-outline-sm page-scroll"
+                                    data-lang="copy"
+                                    style="display: inline-block; margin-left: 8px"
+                            >
+                                [copy]
+                            </button>
+                        </div>
+                        <br/>
 
-                <div class="float-right">
-                  <a
-                    href="https://msg.wookingwoo.com"
-                    target="_blank"
-                    data-lang="go_wookingwoo_msg"
-                    >[go_wookingwoo_msg]</a
-                  >
+                        <div class="float-right">
+                            <a
+                                    href="https://msg.wookingwoo.com"
+                                    target="_blank"
+                                    data-lang="go_wookingwoo_msg"
+                            >[go_wookingwoo_msg]</a
+                            >
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
 
-            <div
-              class="alert alert-dismissible alert-warning"
-              id="fail-card"
-              style="display: none"
-            >
-              <p class="mb-0" id="fail-card-text"></p>
+                <div
+                        class="alert alert-dismissible alert-warning"
+                        id="fail-card"
+                        style="display: none"
+                >
+                    <p class="mb-0" id="fail-card-text"></p>
+                </div>
             </div>
-          </div>
-          <!-- end of text-container -->
+            <!-- end of text-container -->
         </div>
         <!-- end of col -->
-      </div>
-      <!-- end of row -->
-      <!-- end of container -->
-    </header>
-    <!-- end of header -->
-    <!-- end of header -->
+    </div>
+    <!-- end of row -->
+    <!-- end of container -->
+</header>
+<!-- end of header -->
+<!-- end of header -->
 
-    <!-- kaako ad (주소창 하단-묶음) -->
-    <div class="container basic-1 mw-100">
-      <div class="row">
+<!-- kaako ad (주소창 하단-묶음) -->
+<div class="container basic-1 mw-100">
+    <div class="row">
         <!-- kakao ad (주소창 하단1) -->
         <div class="col-lg-6">
-          <ins
-            class="kakao_ad_area"
-            style="display: none"
-            data-ad-unit="DAN-iLA1eog95qVRuz6D"
-            data-ad-width="320"
-            data-ad-height="100"
-          ></ins>
-          <script
-            type="text/javascript"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
-            async
-          ></script>
+            <ins
+                    class="kakao_ad_area"
+                    style="display: none"
+                    data-ad-unit="DAN-iLA1eog95qVRuz6D"
+                    data-ad-width="320"
+                    data-ad-height="100"
+            ></ins>
+            <script
+                    type="text/javascript"
+                    src="//t1.daumcdn.net/kas/static/ba.min.js"
+                    async
+            ></script>
         </div>
         <!-- kakao ad (주소창 하단1) 끝 -->
 
         <!-- kaako ad (주소창 하단2) -->
         <div class="col-lg-6">
-          <ins
-            class="kakao_ad_area"
-            style="display: none"
-            data-ad-unit="DAN-ojh5LEppSYuGRBrb"
-            data-ad-width="320"
-            data-ad-height="100"
-          ></ins>
-          <script
-            type="text/javascript"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
-            async
-          ></script>
+            <ins
+                    class="kakao_ad_area"
+                    style="display: none"
+                    data-ad-unit="DAN-ojh5LEppSYuGRBrb"
+                    data-ad-width="320"
+                    data-ad-height="100"
+            ></ins>
+            <script
+                    type="text/javascript"
+                    src="//t1.daumcdn.net/kas/static/ba.min.js"
+                    async
+            ></script>
         </div>
         <!-- kaako ad (주소창 하단2) 끝 -->
-      </div>
     </div>
-    <!-- kaako ad (주소창 하단-묶음) 끝 -->
+</div>
+<!-- kaako ad (주소창 하단-묶음) 끝 -->
 
-    <!-- Description 1 -->
-    <div id="description" class="basic-1">
-      <div class="container">
+<!-- Description 1 -->
+<div id="description" class="basic-1">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-2"></div>
+            <div class="col-lg-2"></div>
 
-          <div class="col-lg-8">
-            <div class="text-container">
-              <h3 data-lang="description1">[description1]</h3>
+            <div class="col-lg-8">
+                <div class="text-container">
+                    <h3 data-lang="description1">[description1]</h3>
 
-              <ul class="list-unstyled li-space-lg">
-                <li class="media">
-                  <i class="fas fa-square"></i>
-                  <div class="media-body" data-lang="description2">
-                    [description2]
-                  </div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-square"></i>
-                  <div class="media-body" data-lang="description3">
-                    [description3]
-                  </div>
-                </li>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body" data-lang="description2">
+                                [description2]
+                            </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body" data-lang="description3">
+                                [description3]
+                            </div>
+                        </li>
 
-                <li class="media">
-                  <i class="fas fa-square"></i>
-                  <div class="media-body" data-lang="description4">
-                    [description4]
-                  </div>
-                </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body" data-lang="description4">
+                                [description4]
+                            </div>
+                        </li>
 
-                <li class="media">
-                  <i class="fas fa-square"></i>
-                  <div class="media-body" data-lang="description5">
-                    [description5]
-                  </div>
-                </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body" data-lang="description5">
+                                [description5]
+                            </div>
+                        </li>
 
-                <li class="media">
-                  <i class="fas fa-square"></i>
-                  <p
-                    style="margin-left: 8px; margin-right: 8px"
-                    data-lang="email_inquiry"
-                  ></p>
-                  <a href="mailto:contact@wookingwoo.com"
-                    >contact@wookingwoo.com</a
-                  >
-                </li>
-              </ul>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <p
+                                    style="margin-left: 8px; margin-right: 8px"
+                                    data-lang="email_inquiry"
+                            ></p>
+                            <a href="mailto:contact@wookingwoo.com"
+                            >contact@wookingwoo.com</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of text-container -->
             </div>
-            <!-- end of text-container -->
-          </div>
-          <!-- end of col -->
+            <!-- end of col -->
         </div>
         <!-- end of row -->
-      </div>
-      <!-- end of container -->
     </div>
-    <!-- end of basic-1 -->
-    <!-- end of description 1 -->
+    <!-- end of container -->
+</div>
+<!-- end of basic-1 -->
+<!-- end of description 1 -->
 
-    <!-- Description 1 Details Lightbox -->
-    <!-- Details Lightbox -->
-    <div
-      id="description-1-details-lightbox"
-      class="lightbox-basic zoom-anim-dialog mfp-hide"
-    ></div>
-    <!-- end of lightbox-basic -->
-    <!-- end of details lightbox -->
-    <!-- end of description 1 details lightbox -->
+<!-- Description 1 Details Lightbox -->
+<!-- Details Lightbox -->
+<div
+        id="description-1-details-lightbox"
+        class="lightbox-basic zoom-anim-dialog mfp-hide"
+></div>
+<!-- end of lightbox-basic -->
+<!-- end of details lightbox -->
+<!-- end of description 1 details lightbox -->
 
-    <!-- kaako ad (가이드 하단-묶음) -->
-    <div class="container basic-1 mw-100">
-      <div class="row text-center">
+<!-- kaako ad (가이드 하단-묶음) -->
+<div class="container basic-1 mw-100">
+    <div class="row text-center">
         <!-- kakao ad (가이드 하단1) -->
         <div class="col-lg-4" style="float: none; margin: 0 auto">
-          <ins
-            class="kakao_ad_area"
-            style="display: none"
-            data-ad-unit="DAN-TokBoerDjhGz3Yud"
-            data-ad-width="300"
-            data-ad-height="250"
-          ></ins>
-          <script
-            type="text/javascript"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
-            async
-          ></script>
+            <ins
+                    class="kakao_ad_area"
+                    style="display: none"
+                    data-ad-unit="DAN-TokBoerDjhGz3Yud"
+                    data-ad-width="300"
+                    data-ad-height="250"
+            ></ins>
+            <script
+                    type="text/javascript"
+                    src="//t1.daumcdn.net/kas/static/ba.min.js"
+                    async
+            ></script>
         </div>
         <!-- kakao ad (가이드 하단1) 끝 -->
 
         <!-- kaako ad (가이드 하단2) -->
         <div class="col-lg-4" style="float: none; margin: 0 auto">
-          <ins
-            class="kakao_ad_area"
-            style="display: none"
-            data-ad-unit="DAN-YKOpdbGtrlBE9xGq"
-            data-ad-width="300"
-            data-ad-height="250"
-          ></ins>
-          <script
-            type="text/javascript"
-            src="//t1.daumcdn.net/kas/static/ba.min.js"
-            async
-          ></script>
+            <ins
+                    class="kakao_ad_area"
+                    style="display: none"
+                    data-ad-unit="DAN-YKOpdbGtrlBE9xGq"
+                    data-ad-width="300"
+                    data-ad-height="250"
+            ></ins>
+            <script
+                    type="text/javascript"
+                    src="//t1.daumcdn.net/kas/static/ba.min.js"
+                    async
+            ></script>
         </div>
         <!-- kaako ad (가이드 하단2) 끝 -->
 
         <!-- coupang ad (가이드 하단3) -->
         <div class="col-lg-4" style="float: none; margin: 0 auto">
-          <iframe
-            src="https://ads-partners.coupang.com/widgets.html?id=546553&template=carousel&trackingCode=AF5704673&subId=&width=300&height=230"
-            width="300"
-            height="230"
-            frameborder="0"
-            scrolling="no"
-            referrerpolicy="unsafe-url"
-          ></iframe>
-          <h6 class="text-muted">
-            <small
-              >"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의
-              수수료를 제공받습니다."</small
-            >
-          </h6>
+            <iframe
+                    src="https://ads-partners.coupang.com/widgets.html?id=546553&template=carousel&trackingCode=AF5704673&subId=&width=300&height=230"
+                    width="300"
+                    height="230"
+                    frameborder="0"
+                    scrolling="no"
+                    referrerpolicy="unsafe-url"
+            ></iframe>
+            <h6 class="text-muted">
+                <small
+                >"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의
+                    수수료를 제공받습니다."</small
+                >
+            </h6>
         </div>
         <!-- coupang ad (가이드 하단3) 끝 -->
-      </div>
     </div>
-    <!-- kaako ad (가이드 하단-묶음) 끝 -->
+</div>
+<!-- kaako ad (가이드 하단-묶음) 끝 -->
 
-    <!-- Footer -->
-    <div class="footer">
-      <div class="container">
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <div class="footer-col fourth"></div>
+            <div class="col-lg-12">
+                <div class="footer-col fourth"></div>
+                <!-- end of footer-col -->
+
+                <div class="footer-col first"
+                ">
+                <h5>About wkw.one</h5>
+                <p class="p-small" data-lang="description">[description]</p>
+            </div>
+            <!-- end of footer-col -->
+            <div class="footer-col second">
+                <h5>Contact Info</h5>
+                <ul class="list-unstyled li-space-lg p-small">
+                    <li class="media">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="media-body">Republic of Korea, Seoul</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-envelope"></i>
+                        <div class="media-body">
+                            <a href="mailto:contact@wookingwoo.com"
+                            >contact@wookingwoo.com</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <!-- end of footer-col -->
 
-            <div class="footer-col first" ">
-            <h5>About wkw.one</h5>
-            <p class="p-small" data-lang="description">[description]</p>
-          </div>
-          <!-- end of footer-col -->
-          <div class="footer-col second">
-            <h5>Contact Info</h5>
-            <ul class="list-unstyled li-space-lg p-small">
-              <li class="media">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="media-body">Republic of Korea, Seoul</div>
-              </li>
-              <li class="media">
-                <i class="fas fa-envelope"></i>
-                <div class="media-body">
-                  <a href="mailto:contact@wookingwoo.com"
-                    >contact@wookingwoo.com</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- end of footer-col -->
-
-          <div class="footer-col fourth">
-            <h5>Other Apps</h5>
-            <ul class="list-unstyled li-space-lg p-small">
-              <li>
-                <a
-                  href="https://msg.wookingwoo.com"
-                  target="_blank"
-                  data-lang="wookingwoo_msg"
-                  >[wookingwoo_msg]</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://animalface.wookingwoo.com"
-                  target="_blank"
-                  data-lang="animal_face"
-                  >[animal_face]</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://maptool.wookingwoo.com"
-                  target="_blank"
-                  data-lang="wookingwoo_maptool"
-                  >[wookingwoo_maptool]</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- end of footer-col -->
-          <div class="footer-col fifth">
+            <div class="footer-col fourth">
+                <h5>Other Apps</h5>
+                <ul class="list-unstyled li-space-lg p-small">
+                    <li>
+                        <a
+                                href="https://msg.wookingwoo.com"
+                                target="_blank"
+                                data-lang="wookingwoo_msg"
+                        >[wookingwoo_msg]</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="https://animalface.wookingwoo.com"
+                                target="_blank"
+                                data-lang="animal_face"
+                        >[animal_face]</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="https://maptool.wookingwoo.com"
+                                target="_blank"
+                                data-lang="wookingwoo_maptool"
+                        >[wookingwoo_maptool]</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <!-- end of footer-col -->
+            <div class="footer-col fifth">
             <span class="fa-stack">
               <a href="https://wookingwoo.com/" target="_blank">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-home fa-stack-1x"></i>
               </a>
             </span>
-            <span class="fa-stack">
+                <span class="fa-stack">
               <a href="https://github.com/wookingwoo" target="_blank">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-github fa-stack-1x"></i>
               </a>
             </span>
-          </div>
-          <!-- end of footer-col -->
+            </div>
+            <!-- end of footer-col -->
         </div>
         <!-- end of col -->
-      </div>
-      <!-- end of row -->
     </div>
-    <!-- end of container -->
-    <!-- end of footer -->
-    <!-- end of footer -->
+    <!-- end of row -->
+</div>
+<!-- end of container -->
+<!-- end of footer -->
+<!-- end of footer -->
 
-    <!-- Copyright -->
-    <div class="copyright">
-      <div class="container">
+<!-- Copyright -->
+<div class="copyright">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <p class="p-small">
-              Copyright © 2022 <a href="https://wookingwoo.com">wookingwoo</a>
-            </p>
-          </div>
-          <!-- end of col -->
+            <div class="col-lg-12">
+                <p class="p-small">
+                    Copyright © 2022 <a href="https://wookingwoo.com">wookingwoo</a>
+                </p>
+            </div>
+            <!-- end of col -->
         </div>
         <!-- enf of row -->
-      </div>
-      <!-- end of container -->
     </div>
-    <!-- end of copyright -->
-    <!-- end of copyright -->
+    <!-- end of container -->
+</div>
+<!-- end of copyright -->
+<!-- end of copyright -->
 
-    <!-- Scripts -->
-    <script src="FrontEndSource/js/jquery.min.js"></script>
-    <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="FrontEndSource/js/popper.min.js"></script>
-    <!-- Popper tooltip library for Bootstrap -->
-    <script src="FrontEndSource/js/bootstrap.min.js"></script>
-    <!-- Bootstrap framework -->
-    <script src="FrontEndSource/js/jquery.easing.min.js"></script>
-    <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="FrontEndSource/js/swiper.min.js"></script>
-    <!-- Swiper for image and text sliders -->
-    <script src="FrontEndSource/js/jquery.magnific-popup.js"></script>
-    <!-- Magnific Popup for lightboxes -->
-    <script src="FrontEndSource/js/validator.min.js"></script>
-    <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="FrontEndSource/js/scripts.js"></script>
-    <!-- Custom scripts -->
-    <script src="FrontEndSource/js/makeShortURL.js"></script>
-    <script src="FrontEndSource/js/multilingual.js"></script>
-  </body>
+<!-- Scripts -->
+<script src="FrontEndSource/js/jquery.min.js"></script>
+<!-- jQuery for Bootstrap's JavaScript plugins -->
+<script src="FrontEndSource/js/popper.min.js"></script>
+<!-- Popper tooltip library for Bootstrap -->
+<script src="FrontEndSource/js/bootstrap.min.js"></script>
+<!-- Bootstrap framework -->
+<script src="FrontEndSource/js/jquery.easing.min.js"></script>
+<!-- jQuery Easing for smooth scrolling between anchors -->
+<script src="FrontEndSource/js/swiper.min.js"></script>
+<!-- Swiper for image and text sliders -->
+<script src="FrontEndSource/js/jquery.magnific-popup.js"></script>
+<!-- Magnific Popup for lightboxes -->
+<script src="FrontEndSource/js/validator.min.js"></script>
+<!-- Validator.js - Bootstrap plugin that validates forms -->
+<script src="FrontEndSource/js/scripts.js"></script>
+<!-- Custom scripts -->
+<script src="FrontEndSource/js/makeShortURL.js"></script>
+<script src="FrontEndSource/js/multilingual.js"></script>
+</body>
 </html>
