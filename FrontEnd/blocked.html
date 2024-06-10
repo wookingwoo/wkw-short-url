@@ -56,6 +56,19 @@
       .language-selector select:hover {
         background-color: #f0f0f0;
       }
+      .contact-email {
+        margin-top: 20px;
+        font-size: 1em;
+      }
+      .contact-email a {
+        color: #ff4e50;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .contact-email a:hover {
+        color: #ff3333;
+      }
     </style>
     <script>
       function getBrowserLanguage() {
@@ -108,6 +121,15 @@
           <option value="en">English</option>
           <option value="ko">한국어</option>
         </select>
+      </div>
+      <div class="contact-email" data-lang="en">
+        If you have any questions, please contact us at
+        <a href="mailto:contact@wookingwoo.com">contact@wookingwoo.com</a>
+      </div>
+      <div class="contact-email" data-lang="ko">
+        문의 사항이 있으시면
+        <a href="mailto:contact@wookingwoo.com">contact@wookingwoo.com</a>으로
+        연락해 주세요.
       </div>
     </div>
   </body>
